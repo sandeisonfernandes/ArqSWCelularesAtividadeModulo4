@@ -24,6 +24,7 @@ public class MainActivity extends AppCompatActivity {
         ((Button) findViewById(R.id.button)).setOnClickListener(v -> {
             Log.d("devlog", "on click on button 1");
             Intent intent = new Intent(this, MyService1.class);
+            intent.putExtra("TEXTO", "Meu Texto");
             startService(intent);
         });
 
