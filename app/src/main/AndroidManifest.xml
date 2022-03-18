@@ -19,6 +19,7 @@
             </intent-filter>
         </activity>
 
+        <activity android:name=".MyActivity"/>
         <activity android:name=".MyLocationActivity" />
 
         <service android:name=".MyService1" android:exported="true"/>
