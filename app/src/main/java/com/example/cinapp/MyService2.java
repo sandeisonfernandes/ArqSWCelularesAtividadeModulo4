@@ -22,6 +22,10 @@ public class MyService2 extends Service {
     @Override
     public int onStartCommand(Intent intent, int flags, int startId) {
         String text = intent.getExtras().getString("TEXTO");
+        if (!text.equals("")) {
+            Toast.makeText(this, text, Toast.LENGTH_SHORT).show();
+        }
+
         try {
             File file = new File("/sdcard/Documents/", "myFile.txt");
             writeTextData(file, text);
